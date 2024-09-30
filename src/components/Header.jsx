@@ -1,15 +1,20 @@
-import { Link } from "react-router-dom";
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
-function Header() {
+const Header = () => {
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/cardapio">Cardápio</Link></li>
-        <li><Link to="/login">Login</Link></li>
-      </ul>
-    </nav>
+    <header>
+      <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Salento.</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="cardapio">Cardápio</Nav.Link>
+            <Nav.Link href="login">Login</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </header>
   );
-}
+};
 
 export default Header;
